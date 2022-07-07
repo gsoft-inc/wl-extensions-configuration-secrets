@@ -5,9 +5,9 @@ namespace ShareGate.Extensions.Configuration.Secrets;
 
 public interface ISecretClientProvider
 {
-    SecretClient GetSecretClient(KeyVaultKind keyVaultKind);
+    SecretClient GetSecretClient(KeyVaultKind keyVaultKind, SecretClientOptions? options = null);
 
-    SecretClient GetSecretClient(Uri keyVaultUri);
+    SecretClient GetSecretClient(Uri keyVaultUri, SecretClientOptions? options = null);
 
-    SecretClient GetSecretClient(string configurationKey);
+    SecretClient GetSecretClient(string configurationKey, SecretClientOptions? options = null);
 }

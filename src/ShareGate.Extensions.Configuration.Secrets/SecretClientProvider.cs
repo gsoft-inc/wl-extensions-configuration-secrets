@@ -28,13 +28,13 @@ public sealed class SecretClientProvider : ISecretClientProvider
     {
     }
 
-    public SecretClient GetSecretClient(KeyVaultKind keyVaultKind)
+    public SecretClient GetSecretClient(KeyVaultKind keyVaultKind, SecretClientOptions? options = null)
     {
         var keyVaultUri = this.GetKeyVaultUri(keyVaultKind);
-        return this.GetSecretClient(keyVaultUri);
+        return this.GetSecretClient(keyVaultUri, options);
     }
 
-    public SecretClient GetSecretClient(Uri keyVaultUri)
+    public SecretClient GetSecretClient(Uri keyVaultUri, SecretClientOptions? options = null)
     {
         if (keyVaultUri == null)
         {
@@ -44,10 +44,10 @@ public sealed class SecretClientProvider : ISecretClientProvider
         var azureCredential = this._tokenCredentialProvider.GetTokenCredential();
 
         // SecretClient already has a default retry policy (max 3 retries)
-        return new SecretClient(keyVaultUri, azureCredential);
+        return new SecretClient(keyVaultUri, azureCredential, options);
     }
 
-    public SecretClient GetSecretClient(string configurationKey)
+    public SecretClient GetSecretClient(string configurationKey, SecretClientOptions? options = null)
     {
         if (configurationKey == null)
         {
@@ -55,7 +55,7 @@ public sealed class SecretClientProvider : ISecretClientProvider
         }
 
         var keyVaultUri = this.GetKeyVaultUri(configurationKey);
-        return this.GetSecretClient(keyVaultUri);
+        return this.GetSecretClient(keyVaultUri, options);
     }
 
     private Uri GetKeyVaultUri(KeyVaultKind keyVaultKind)
