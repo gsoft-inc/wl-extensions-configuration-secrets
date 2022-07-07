@@ -28,16 +28,16 @@ public sealed class TokenCredentialProvider : ITokenCredentialProvider
             return GetAzureCliCompatibleTokenCredential();
         }
 
-        // We prefer to only use Azure Managed Identity over DefaultAzureCredential which allows multiple ways to authenticate against Azure
         // See https://docs.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredential?view=azure-dotnet
-        return new ManagedIdentityCredential();
+        return new DefaultAzureCredential();
     }
 
     private static TokenCredential GetAzureCliCompatibleTokenCredential()
     {
         // Azure CLI does not work when Fiddler is active so we need to use an interactive authentication method instead
+        // When Fiddler is not active, we try to use AzureCliCredential because it's way faster than DefaultAzureCredential on startup
         return FiddlerProxyDetector.IsFiddlerActive()
             ? new CachedInteractiveBrowserCredential()
-            : new ChainedTokenCredential(new AzureCliCredential(), new ManagedIdentityCredential());
+            : new ChainedTokenCredential(new AzureCliCredential(), new DefaultAzureCredential());
     }
 }
