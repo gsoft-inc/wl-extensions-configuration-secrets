@@ -37,8 +37,6 @@ builder.Services.AddKeyVaultSecrets();
 * Chained credentials of `AzureCliCredential` and `ManagedIdentityCredential` in development environment, or
 * `CachedInteractiveBrowserCredential` in development environment only when **Fiddler** is opened (Fiddler interferes with `az login` authentication).
 
-> Note that `DefaultAzureCredential` is never used.
-
 ```csharp
 var azureCredential = new TokenCredentialProvider(environment).GetTokenCredential(); // or
 var azureCredential = services.GetRequiredService<ITokenCredentialProvider>().GetTokenCredential();
