@@ -17,21 +17,25 @@ public static class ServiceCollectionExtensions
         return services;
     }
 
-    public static IConfigurationBuilder AddKeyVaultSecrets(this IConfigurationBuilder builder, IHostEnvironment environment, KeyVaultKind keyVaultKind = KeyVaultKind.ApplicationConfiguration)
+    public static IConfigurationBuilder AddKeyVaultSecrets(
+        this IConfigurationBuilder builder,
+        IHostEnvironment environment,
+        AzureKeyVaultConfigurationOptions? options = null,
+        KeyVaultKind keyVaultKind = KeyVaultKind.ApplicationConfiguration)
     {
         var secretClient = new SecretClientProvider(builder, environment).GetSecretClient(keyVaultKind);
-        return builder.AddAzureKeyVault(secretClient, new KeyVaultSecretManager());
+        return builder.AddAzureKeyVault(secretClient, options ?? new AzureKeyVaultConfigurationOptions());
     }
 
-    public static IConfigurationBuilder AddKeyVaultSecrets(this IConfigurationBuilder builder, IHostEnvironment environment, Uri keyVaultUri)
+    public static IConfigurationBuilder AddKeyVaultSecrets(this IConfigurationBuilder builder, IHostEnvironment environment, Uri keyVaultUri, AzureKeyVaultConfigurationOptions? options = null)
     {
         var secretClient = new SecretClientProvider(builder, environment).GetSecretClient(keyVaultUri);
-        return builder.AddAzureKeyVault(secretClient, new KeyVaultSecretManager());
+        return builder.AddAzureKeyVault(secretClient, options ?? new AzureKeyVaultConfigurationOptions());
     }
 
-    public static IConfigurationBuilder AddKeyVaultSecrets(this IConfigurationBuilder builder, IHostEnvironment environment, string configurationKey)
+    public static IConfigurationBuilder AddKeyVaultSecrets(this IConfigurationBuilder builder, IHostEnvironment environment, string configurationKey, AzureKeyVaultConfigurationOptions? options = null)
     {
         var secretClient = new SecretClientProvider(builder, environment).GetSecretClient(configurationKey);
-        return builder.AddAzureKeyVault(secretClient, new KeyVaultSecretManager());
+        return builder.AddAzureKeyVault(secretClient, options ?? new AzureKeyVaultConfigurationOptions());
     }
 }
