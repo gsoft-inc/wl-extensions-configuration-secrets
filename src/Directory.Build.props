@@ -1,14 +1,16 @@
 <Project>
   <PropertyGroup>
-    <Copyright>Copyright © Groupe GSoft inc. $([System.DateTime]::UtcNow.ToString(yyyy))</Copyright>
+    <Copyright>Copyright © Groupe GSoft Inc. $([System.DateTime]::UtcNow.ToString(yyyy))</Copyright>
     <Authors>GSoft Group Inc.</Authors>
     <Owners>GSoft Group Inc.</Owners>
     <PackageProjectUrl>https://github.com/gsoft-inc/gsoft-extensions-configuration-secrets</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <LangVersion>10</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <Description>Allows storing configuration values in Azure Key Vault Secrets, using the right Azure credentials based on the current environment.</Description>
+    <PackageTags>TODO</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -16,9 +18,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.406">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="GitVersion.MsBuild" Version="5.11.1" Condition=" '$(Configuration)' == 'Release' ">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="$(MSBuildProjectName.Contains('Tests'))">
+    <Using Include="Xunit" />
+    <Using Include="Xunit.Abstractions" />
   </ItemGroup>
 </Project>
