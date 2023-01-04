@@ -1,6 +1,6 @@
 ﻿using Azure.Core;
 
-namespace ShareGate.Extensions.Configuration.Secrets;
+namespace GSoft.Extensions.Configuration.Secrets;
 
 public interface ITokenCredentialProvider
 {

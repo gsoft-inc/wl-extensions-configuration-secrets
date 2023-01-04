@@ -4,7 +4,7 @@ using Azure.Security.KeyVault.Secrets;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
-namespace ShareGate.Extensions.Configuration.Secrets;
+namespace GSoft.Extensions.Configuration.Secrets;
 
 public sealed class SecretClientProvider : ISecretClientProvider
 {

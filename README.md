@@ -1,7 +1,7 @@
-# ShareGate.Extensions.Configuration.Secrets
+# GSoft.Extensions.Configuration.Secrets
 
-[![nuget](https://img.shields.io/nuget/v/ShareGate.Extensions.Configuration.Secrets.svg?logo=nuget)](https://www.nuget.org/packages/ShareGate.Extensions.Configuration.Secrets/)
-[![build](https://img.shields.io/github/workflow/status/gsoft-inc/sg-extensions-configuration-secrets/CI%20build?logo=github)](https://github.com/gsoft-inc/sg-extensions-configuration-secrets/actions/workflows/ci.yml)
+[![nuget](https://img.shields.io/nuget/v/GSoft.Extensions.Configuration.Secrets.svg?logo=nuget)](https://www.nuget.org/packages/GSoft.Extensions.Configuration.Secrets/)
+[![build](https://img.shields.io/github/workflow/status/gsoft-inc/gsoft-extensions-configuration-secrets/CI%20build?logo=github)](https://github.com/gsoft-inc/gsoft-extensions-configuration-secrets/actions/workflows/ci.yml)
 
 This package allows storing configuration values in [Azure Key Vault Secrets](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/extensions.aspnetcore.configuration.secrets-readme),
 using the right [Azure credentials](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/identity-readme#credential-classes) based on the current [environment](https://docs.microsoft.com/en-us/dotnet/core/extensions/generic-host#ihostenvironment).
@@ -12,7 +12,7 @@ It can also be used to register `ITokenCredentialProvider` and `ISecretClientPro
 ## Getting started
 
 ```
-dotnet add package ShareGate.Extensions.Configuration.Secrets
+dotnet add package GSoft.Extensions.Configuration.Secrets
 ```
 
 Example with an **ASP.NET Core minimal API**:

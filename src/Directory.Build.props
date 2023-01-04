@@ -1,9 +1,9 @@
 <Project>
   <PropertyGroup>
     <Copyright>Copyright © Groupe GSoft inc. $([System.DateTime]::UtcNow.ToString(yyyy))</Copyright>
-    <Authors>Anthony Simmon</Authors>
-    <Owners>Groupe GSoft inc.</Owners>
-    <PackageProjectUrl>https://github.com/gsoft-inc/sg-extensions-configuration-secrets</PackageProjectUrl>
+    <Authors>GSoft Group Inc.</Authors>
+    <Owners>GSoft Group Inc.</Owners>
+    <PackageProjectUrl>https://github.com/gsoft-inc/gsoft-extensions-configuration-secrets</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <LangVersion>10</LangVersion>
     <Nullable>enable</Nullable>

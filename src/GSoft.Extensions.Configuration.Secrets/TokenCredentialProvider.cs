@@ -4,7 +4,7 @@ using Azure.Core;
 using Azure.Identity;
 using Microsoft.Extensions.Hosting;
 
-namespace ShareGate.Extensions.Configuration.Secrets;
+namespace GSoft.Extensions.Configuration.Secrets;
 
 public sealed class TokenCredentialProvider : ITokenCredentialProvider
 {
