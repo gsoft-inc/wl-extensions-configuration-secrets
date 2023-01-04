@@ -15,7 +15,7 @@ internal sealed class CachedInteractiveBrowserCredential : InteractiveBrowserCre
 {
     // InteractiveBrowserCredential sets its internal "Record" property after a token is retrieved,
     // we need its value to prevent multiple browser auth prompt after a successful one
-    private static readonly PropertyInfo InternalRecordProperty = typeof(InteractiveBrowserCredential).GetProperty("Record", BindingFlags.Instance | BindingFlags.NonPublic)
+    internal static readonly PropertyInfo InternalRecordProperty = typeof(InteractiveBrowserCredential).GetProperty("Record", BindingFlags.Instance | BindingFlags.NonPublic)
         ?? throw new InvalidOperationException("Could not find internal property " + nameof(InteractiveBrowserCredential) + ".Result");
 
     // The path to the cached authentication record, not to be confused with the actual confidential oauth tokens
