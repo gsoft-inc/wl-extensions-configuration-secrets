@@ -10,7 +10,6 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <Description>Allows storing configuration values in Azure Key Vault Secrets, using the right Azure credentials based on the current environment.</Description>
-    <PackageTags>TODO</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
