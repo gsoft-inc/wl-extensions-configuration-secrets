@@ -1,7 +1,7 @@
 # GSoft.Extensions.Configuration.Secrets
 
 [![nuget](https://img.shields.io/nuget/v/GSoft.Extensions.Configuration.Secrets.svg?logo=nuget)](https://www.nuget.org/packages/GSoft.Extensions.Configuration.Secrets/)
-[![build](https://img.shields.io/github/workflow/status/gsoft-inc/gsoft-extensions-configuration-secrets/CI%20build?logo=github)](https://github.com/gsoft-inc/gsoft-extensions-configuration-secrets/actions/workflows/ci.yml)
+[![build](https://img.shields.io/github/actions/workflow/status/gsoft-inc/gsoft-extensions-configuration-secrets/publish.yml?logo=github)](https://github.com/gsoft-inc/gsoft-extensions-configuration-secrets/actions/workflows/publish.yml)
 
 This package allows storing configuration values in [Azure Key Vault Secrets](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/extensions.aspnetcore.configuration.secrets-readme),
 using the right [Azure credentials](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/identity-readme#credential-classes) based on the current [environment](https://docs.microsoft.com/en-us/dotnet/core/extensions/generic-host#ihostenvironment).
