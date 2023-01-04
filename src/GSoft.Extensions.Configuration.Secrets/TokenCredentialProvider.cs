@@ -9,7 +9,7 @@ namespace GSoft.Extensions.Configuration.Secrets;
 
 public sealed class TokenCredentialProvider : ITokenCredentialProvider
 {
-    // Quote from a Microsofdt Azure SDK developer:
+    // Quote from a Microsoft Azure SDK developer:
     // "The only reason to intentionally use a different instance of the credential is if you intend to discover a different credential in the chain.
     // So generally speaking, it's better to use a singleton credential."
     // See https://github.com/Azure/azure-sdk-for-net/issues/31202#issuecomment-1284543516
