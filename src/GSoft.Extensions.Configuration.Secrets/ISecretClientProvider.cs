@@ -1,7 +1,7 @@
 ﻿using System;
 using Azure.Security.KeyVault.Secrets;
 
-namespace ShareGate.Extensions.Configuration.Secrets;
+namespace GSoft.Extensions.Configuration.Secrets;
 
 public interface ISecretClientProvider
 {

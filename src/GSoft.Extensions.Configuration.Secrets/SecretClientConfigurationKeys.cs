@@ -1,4 +1,4 @@
-﻿namespace ShareGate.Extensions.Configuration.Secrets;
+﻿namespace GSoft.Extensions.Configuration.Secrets;
 
 public static class SecretClientConfigurationKeys
 {

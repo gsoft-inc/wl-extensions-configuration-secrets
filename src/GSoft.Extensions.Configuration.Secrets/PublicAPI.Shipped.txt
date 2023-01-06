@@ -1,0 +1,27 @@
+#nullable enable
+const GSoft.Extensions.Configuration.Secrets.SecretClientConfigurationKeys.ApplicationConfiguration = "Azure:KeyVaults:ApplicationConfiguration" -> string!
+const GSoft.Extensions.Configuration.Secrets.SecretClientConfigurationKeys.UserPersonalInformation = "Azure:KeyVaults:UserPersonalInformation" -> string!
+GSoft.Extensions.Configuration.Secrets.ISecretClientProvider
+GSoft.Extensions.Configuration.Secrets.ISecretClientProvider.GetSecretClient(GSoft.Extensions.Configuration.Secrets.KeyVaultKind keyVaultKind, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+GSoft.Extensions.Configuration.Secrets.ISecretClientProvider.GetSecretClient(string! configurationKey, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+GSoft.Extensions.Configuration.Secrets.ISecretClientProvider.GetSecretClient(System.Uri! keyVaultUri, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+GSoft.Extensions.Configuration.Secrets.ITokenCredentialProvider
+GSoft.Extensions.Configuration.Secrets.ITokenCredentialProvider.GetTokenCredential() -> Azure.Core.TokenCredential!
+GSoft.Extensions.Configuration.Secrets.KeyVaultKind
+GSoft.Extensions.Configuration.Secrets.KeyVaultKind.ApplicationConfiguration = 0 -> GSoft.Extensions.Configuration.Secrets.KeyVaultKind
+GSoft.Extensions.Configuration.Secrets.KeyVaultKind.UserPersonalInformation = 1 -> GSoft.Extensions.Configuration.Secrets.KeyVaultKind
+GSoft.Extensions.Configuration.Secrets.SecretClientConfigurationKeys
+GSoft.Extensions.Configuration.Secrets.SecretClientProvider
+GSoft.Extensions.Configuration.Secrets.SecretClientProvider.GetSecretClient(GSoft.Extensions.Configuration.Secrets.KeyVaultKind keyVaultKind, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+GSoft.Extensions.Configuration.Secrets.SecretClientProvider.GetSecretClient(string! configurationKey, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+GSoft.Extensions.Configuration.Secrets.SecretClientProvider.GetSecretClient(System.Uri! keyVaultUri, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+GSoft.Extensions.Configuration.Secrets.SecretClientProvider.SecretClientProvider(Microsoft.Extensions.Configuration.IConfiguration! configuration, Microsoft.Extensions.Hosting.IHostEnvironment! environment) -> void
+GSoft.Extensions.Configuration.Secrets.SecretClientProvider.SecretClientProvider(Microsoft.Extensions.Configuration.IConfigurationBuilder! configurationBuilder, Microsoft.Extensions.Hosting.IHostEnvironment! environment) -> void
+GSoft.Extensions.Configuration.Secrets.ServiceCollectionExtensions
+GSoft.Extensions.Configuration.Secrets.TokenCredentialProvider
+GSoft.Extensions.Configuration.Secrets.TokenCredentialProvider.GetTokenCredential() -> Azure.Core.TokenCredential!
+GSoft.Extensions.Configuration.Secrets.TokenCredentialProvider.TokenCredentialProvider(Microsoft.Extensions.Hosting.IHostEnvironment! environment) -> void
+static GSoft.Extensions.Configuration.Secrets.ServiceCollectionExtensions.AddKeyVaultSecrets(this Microsoft.Extensions.Configuration.IConfigurationBuilder! builder, Microsoft.Extensions.Hosting.IHostEnvironment! environment, Azure.Extensions.AspNetCore.Configuration.Secrets.AzureKeyVaultConfigurationOptions? options = null, GSoft.Extensions.Configuration.Secrets.KeyVaultKind keyVaultKind = GSoft.Extensions.Configuration.Secrets.KeyVaultKind.ApplicationConfiguration) -> Microsoft.Extensions.Configuration.IConfigurationBuilder!
+static GSoft.Extensions.Configuration.Secrets.ServiceCollectionExtensions.AddKeyVaultSecrets(this Microsoft.Extensions.Configuration.IConfigurationBuilder! builder, Microsoft.Extensions.Hosting.IHostEnvironment! environment, string! configurationKey, Azure.Extensions.AspNetCore.Configuration.Secrets.AzureKeyVaultConfigurationOptions? options = null) -> Microsoft.Extensions.Configuration.IConfigurationBuilder!
+static GSoft.Extensions.Configuration.Secrets.ServiceCollectionExtensions.AddKeyVaultSecrets(this Microsoft.Extensions.Configuration.IConfigurationBuilder! builder, Microsoft.Extensions.Hosting.IHostEnvironment! environment, System.Uri! keyVaultUri, Azure.Extensions.AspNetCore.Configuration.Secrets.AzureKeyVaultConfigurationOptions? options = null) -> Microsoft.Extensions.Configuration.IConfigurationBuilder!
+static GSoft.Extensions.Configuration.Secrets.ServiceCollectionExtensions.AddKeyVaultSecrets(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!

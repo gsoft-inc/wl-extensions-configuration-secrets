@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Azure.Core;
 using Azure.Identity;
 
-namespace ShareGate.Extensions.Configuration.Secrets;
+namespace GSoft.Extensions.Configuration.Secrets;
 
 /// <summary>
 /// This class should only be used for development purposes
@@ -21,13 +21,13 @@ internal sealed class CachedInteractiveBrowserCredential : InteractiveBrowserCre
     // The path to the cached authentication record, not to be confused with the actual confidential oauth tokens
     // which are cached and handled internally by Azure.Identity library
     private static readonly string UserProfileDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-    private static readonly string AuthRecordCacheDirectory = Path.Combine(UserProfileDirectory, ".sharegate");
+    private static readonly string AuthRecordCacheDirectory = Path.Combine(UserProfileDirectory, ".gsoft");
     private static readonly string AuthRecordCachePath = Path.Combine(AuthRecordCacheDirectory, "azbrowserauthrecord.json");
 
     private static readonly TokenCachePersistenceOptions PersistenceOptions = new TokenCachePersistenceOptions
     {
         // Azure.Identity uses MSAL and caches tokens somewhere, the following string will be used in the cache path
-        Name = "sharegate",
+        Name = "gsoft",
 
         // Oauth tokens must be encrypted
         UnsafeAllowUnencryptedStorage = false,
