@@ -1,4 +1,4 @@
-namespace GSoft.Extensions.Configuration.Secrets.Tests;
+namespace Workleap.Extensions.Configuration.Secrets.Tests;
 
 public class CachedInteractiveBrowserCredentialTests
 {

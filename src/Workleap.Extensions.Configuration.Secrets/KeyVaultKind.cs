@@ -1,4 +1,4 @@
-namespace GSoft.Extensions.Configuration.Secrets;
+namespace Workleap.Extensions.Configuration.Secrets;
 
 public enum KeyVaultKind
 {
