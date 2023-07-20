@@ -1,6 +1,6 @@
 using System;
 
-namespace GSoft.Extensions.Configuration.Secrets;
+namespace Workleap.Extensions.Configuration.Secrets;
 
 internal static class FiddlerProxyDetector
 {

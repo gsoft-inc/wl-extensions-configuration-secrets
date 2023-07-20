@@ -5,7 +5,7 @@ using Azure.Core;
 using Azure.Identity;
 using Microsoft.Extensions.Hosting;
 
-namespace GSoft.Extensions.Configuration.Secrets;
+namespace Workleap.Extensions.Configuration.Secrets;
 
 public sealed class TokenCredentialProvider : ITokenCredentialProvider
 {

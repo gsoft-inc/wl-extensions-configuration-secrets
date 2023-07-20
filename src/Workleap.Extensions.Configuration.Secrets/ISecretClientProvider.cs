@@ -1,7 +1,7 @@
 ﻿using System;
 using Azure.Security.KeyVault.Secrets;
 
-namespace GSoft.Extensions.Configuration.Secrets;
+namespace Workleap.Extensions.Configuration.Secrets;
 
 public interface ISecretClientProvider
 {

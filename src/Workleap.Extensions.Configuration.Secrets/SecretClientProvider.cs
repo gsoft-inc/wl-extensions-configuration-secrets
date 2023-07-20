@@ -4,7 +4,7 @@ using Azure.Security.KeyVault.Secrets;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
-namespace GSoft.Extensions.Configuration.Secrets;
+namespace Workleap.Extensions.Configuration.Secrets;
 
 public sealed class SecretClientProvider : ISecretClientProvider
 {

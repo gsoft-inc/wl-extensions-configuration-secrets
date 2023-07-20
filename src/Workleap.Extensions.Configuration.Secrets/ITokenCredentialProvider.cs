@@ -1,6 +1,6 @@
 ﻿using Azure.Core;
 
-namespace GSoft.Extensions.Configuration.Secrets;
+namespace Workleap.Extensions.Configuration.Secrets;
 
 public interface ITokenCredentialProvider
 {

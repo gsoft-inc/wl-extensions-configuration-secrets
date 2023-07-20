@@ -1,0 +1,27 @@
+#nullable enable
+const Workleap.Extensions.Configuration.Secrets.SecretClientConfigurationKeys.ApplicationConfiguration = "Azure:KeyVaults:ApplicationConfiguration" -> string!
+const Workleap.Extensions.Configuration.Secrets.SecretClientConfigurationKeys.UserPersonalInformation = "Azure:KeyVaults:UserPersonalInformation" -> string!
+Workleap.Extensions.Configuration.Secrets.ISecretClientProvider
+Workleap.Extensions.Configuration.Secrets.ISecretClientProvider.GetSecretClient(Workleap.Extensions.Configuration.Secrets.KeyVaultKind keyVaultKind, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+Workleap.Extensions.Configuration.Secrets.ISecretClientProvider.GetSecretClient(string! configurationKey, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+Workleap.Extensions.Configuration.Secrets.ISecretClientProvider.GetSecretClient(System.Uri! keyVaultUri, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+Workleap.Extensions.Configuration.Secrets.ITokenCredentialProvider
+Workleap.Extensions.Configuration.Secrets.ITokenCredentialProvider.GetTokenCredential() -> Azure.Core.TokenCredential!
+Workleap.Extensions.Configuration.Secrets.KeyVaultKind
+Workleap.Extensions.Configuration.Secrets.KeyVaultKind.ApplicationConfiguration = 0 -> Workleap.Extensions.Configuration.Secrets.KeyVaultKind
+Workleap.Extensions.Configuration.Secrets.KeyVaultKind.UserPersonalInformation = 1 -> Workleap.Extensions.Configuration.Secrets.KeyVaultKind
+Workleap.Extensions.Configuration.Secrets.SecretClientConfigurationKeys
+Workleap.Extensions.Configuration.Secrets.SecretClientProvider
+Workleap.Extensions.Configuration.Secrets.SecretClientProvider.GetSecretClient(Workleap.Extensions.Configuration.Secrets.KeyVaultKind keyVaultKind, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+Workleap.Extensions.Configuration.Secrets.SecretClientProvider.GetSecretClient(string! configurationKey, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+Workleap.Extensions.Configuration.Secrets.SecretClientProvider.GetSecretClient(System.Uri! keyVaultUri, Azure.Security.KeyVault.Secrets.SecretClientOptions? options = null) -> Azure.Security.KeyVault.Secrets.SecretClient!
+Workleap.Extensions.Configuration.Secrets.SecretClientProvider.SecretClientProvider(Microsoft.Extensions.Configuration.IConfiguration! configuration, Microsoft.Extensions.Hosting.IHostEnvironment! environment) -> void
+Workleap.Extensions.Configuration.Secrets.SecretClientProvider.SecretClientProvider(Microsoft.Extensions.Configuration.IConfigurationBuilder! configurationBuilder, Microsoft.Extensions.Hosting.IHostEnvironment! environment) -> void
+Workleap.Extensions.Configuration.Secrets.ServiceCollectionExtensions
+Workleap.Extensions.Configuration.Secrets.TokenCredentialProvider
+Workleap.Extensions.Configuration.Secrets.TokenCredentialProvider.GetTokenCredential() -> Azure.Core.TokenCredential!
+Workleap.Extensions.Configuration.Secrets.TokenCredentialProvider.TokenCredentialProvider(Microsoft.Extensions.Hosting.IHostEnvironment! environment) -> void
+static Workleap.Extensions.Configuration.Secrets.ServiceCollectionExtensions.AddKeyVaultSecrets(this Microsoft.Extensions.Configuration.IConfigurationBuilder! builder, Microsoft.Extensions.Hosting.IHostEnvironment! environment, Azure.Extensions.AspNetCore.Configuration.Secrets.AzureKeyVaultConfigurationOptions? options = null, Workleap.Extensions.Configuration.Secrets.KeyVaultKind keyVaultKind = Workleap.Extensions.Configuration.Secrets.KeyVaultKind.ApplicationConfiguration) -> Microsoft.Extensions.Configuration.IConfigurationBuilder!
+static Workleap.Extensions.Configuration.Secrets.ServiceCollectionExtensions.AddKeyVaultSecrets(this Microsoft.Extensions.Configuration.IConfigurationBuilder! builder, Microsoft.Extensions.Hosting.IHostEnvironment! environment, string! configurationKey, Azure.Extensions.AspNetCore.Configuration.Secrets.AzureKeyVaultConfigurationOptions? options = null) -> Microsoft.Extensions.Configuration.IConfigurationBuilder!
+static Workleap.Extensions.Configuration.Secrets.ServiceCollectionExtensions.AddKeyVaultSecrets(this Microsoft.Extensions.Configuration.IConfigurationBuilder! builder, Microsoft.Extensions.Hosting.IHostEnvironment! environment, System.Uri! keyVaultUri, Azure.Extensions.AspNetCore.Configuration.Secrets.AzureKeyVaultConfigurationOptions? options = null) -> Microsoft.Extensions.Configuration.IConfigurationBuilder!
+static Workleap.Extensions.Configuration.Secrets.ServiceCollectionExtensions.AddKeyVaultSecrets(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
