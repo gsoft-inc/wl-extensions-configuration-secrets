@@ -9,6 +9,7 @@
     <LangVersion>10</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
+    <AnalysisLevel>latest-All</AnalysisLevel>
     <Description>Allows storing configuration values in Azure Key Vault Secrets, using the right Azure credentials based on the current environment.</Description>
   </PropertyGroup>
 
