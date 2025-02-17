@@ -1,7 +1,7 @@
 # Workleap.Extensions.Configuration.Secrets
 
 [![nuget](https://img.shields.io/nuget/v/Workleap.Extensions.Configuration.Secrets.svg?logo=nuget)](https://www.nuget.org/packages/Workleap.Extensions.Configuration.Secrets/)
-[![build](https://img.shields.io/github/actions/workflow/status/gsoft-inc/wl-extensions-configuration-secrets/publish.yml?logo=github)](https://github.com/gsoft-inc/wl-extensions-configuration-secrets/actions/workflows/publish.yml)
+[![build](https://img.shields.io/github/actions/workflow/status/workleap/wl-extensions-configuration-secrets/publish.yml?logo=github)](https://github.com/workleap/wl-extensions-configuration-secrets/actions/workflows/publish.yml)
 
 This package allows storing configuration values in [Azure Key Vault Secrets](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/extensions.aspnetcore.configuration.secrets-readme),
 using the right [Azure credentials](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/identity-readme#credential-classes) based on the current [environment](https://docs.microsoft.com/en-us/dotnet/core/extensions/generic-host#ihostenvironment).
@@ -59,4 +59,4 @@ var secretClient = secretClientProvider.GetSecretClient(configurationKey);
 
 ## License
 
-Copyright © 2022, Workleap. This code is licensed under the Apache License, Version 2.0. You may obtain a copy of this license at https://github.com/gsoft-inc/gsoft-license/blob/master/LICENSE.
+Copyright © 2022, Workleap. This code is licensed under the Apache License, Version 2.0. You may obtain a copy of this license at https://github.com/workleap/gsoft-license/blob/master/LICENSE.
